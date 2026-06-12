@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package benchmark;
+
+option go_package = "github.com/gaxeliy/serialization-protocols-benchmark/go/generated";
+
+message PrimitiveTypes {
+    int32 int_val = 1;
+    double float_val = 2;
+    string str_val = 3;
+    bool bool_val = 4;
+}
+
+message ComplexItem {
+    string name = 1;
+    int32 id = 2;
+    double score = 3;
+    repeated string tags = 4;
+}
+
+message SmallMessage {
+    int32 int_val = 1;
+    double float_val = 2;
+    string str_val = 3;
+    bool bool_val = 4;
+}
+
+message MediumMessage {
+    string name = 1;
+    int32 id = 2;
+    repeated double scores = 3;
+    map<string, string> metadata = 4;
+    PrimitiveTypes nested = 5;
+}
+
+message LargeMessage {
+    repeated ComplexItem items = 1;
+}

@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Go
+# go.sum is committed (lockfile)
+
+# Generated code
+python/generated/
+go/generated/
+
+# Results & plots
+results/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

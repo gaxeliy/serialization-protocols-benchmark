@@ -1,0 +1,39 @@
+namespace benchmark;
+
+table PrimitiveTypes {
+    int_val: int32;
+    float_val: double;
+    str_val: string;
+    bool_val: bool;
+}
+
+table ComplexItem {
+    name: string;
+    id: int32;
+    score: double;
+    tags: [string];
+}
+
+table SmallMessage {
+    int_val: int32;
+    float_val: double;
+    str_val: string;
+    bool_val: bool;
+}
+
+table MediumMessage {
+    name: string;
+    id: int32;
+    scores: [double];
+    metadata_keys: [string];
+    metadata_values: [string];
+    nested: PrimitiveTypes;
+}
+
+table LargeMessage {
+    items: [ComplexItem];
+}
+
+root_type SmallMessage;
+root_type MediumMessage;
+root_type LargeMessage;
